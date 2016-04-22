@@ -117,7 +117,7 @@
 		
 		
 	$nextButton = '
-						<div class="topic-picker-grid"> 
+						<div class="topic-picker-next"> 
 						<a class="next-btn" href="http://bitpops.com">NEXT</a>
 						</div>';
 	

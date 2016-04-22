@@ -158,10 +158,10 @@ width: 100%;
     border-color:#DD0000
 }
 .next-btn {
+	display:block;
   	font-family: 'PT Sans Narrow', sans-serif;
     border:2px solid #44454b;
 	width:100%;
-	margin-top:3em;
     padding:8px 14px 8px;
     font-size:1.5em;
     text-align:center;
@@ -246,6 +246,14 @@ display: inline-block}
 	margin-left:auto;
 	margin-right: auto;
 
+}
+.topic-picker-next {
+    background:#fff;
+    display: block;
+    float:left;
+    width:97%;
+    margin-left:1.5%;
+    margin-right:1.5%
 }
 /* Grid List  */
 .grid-list-wrapper {
@@ -376,16 +384,16 @@ min-height: 90px;
 }
 /* BitPops Topic Picker */
 .topic-picker-grid {
-    background:#fff;
-    margin:0 0 3em;
-    display: block;
-    float:left;
     width:27%;
     margin-left:3%;
     margin-right:3%
 }
 
-
+.topic-picker-next {
+	width:93%;
+    margin-left:3%;
+    margin-right:3%
+}
 header {
     background:#fff;
     margin:2em 15px;
