@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_id": "fluxx-7ea3a",
+    "project_number": "210807038101",
+    "name": "Fluxx"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210807038101:android:e29f9429b2231316",
+        "client_id": "android:com.dogaozkaraca.fluxx",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.dogaozkaraca.fluxx",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210807038101-9nnmbt5994mil1pu9pv09rjl5ok4qh9g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dogaozkaraca.fluxx",
+            "certificate_hash": "28ECA2C7A67ACAE329E96AE5F0B1F35B54563F64"
+          }
+        },
+        {
+          "client_id": "210807038101-njdno7crgh397smk44kkg8t78lvsr4a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

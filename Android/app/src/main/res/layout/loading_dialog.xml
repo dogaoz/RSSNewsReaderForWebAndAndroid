@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="#F0ECEEED"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/loadingRelativeLayout"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true">
+<t.Thin
+    android:id="@+id/loadingText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:shadowColor="#FFFFFF"
+    android:shadowDx="2"
+    android:shadowDy="1"
+    android:shadowRadius="2"
+    android:textSize="20sp"
+    android:paddingBottom="15dp"
+    android:text="Loading... "
+    android:textColor="#000000" />
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">BitPops</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_post_reader">PostReaderActivity</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <string name="flux_settings">Settings</string>
+    <string name="logintotwitter">Login to Twitter</string>
+    <string name="logintoinstagram">Login to Instagram</string>
+
+
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
+    <string name="rss">News</string>
+
+
+
+</resources>

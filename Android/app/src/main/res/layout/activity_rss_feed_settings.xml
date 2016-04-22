@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#FFF"
+    tools:context=".Settings.RssSettings">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/myfeed"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+
+        <ListView
+            android:id="@+id/ListView1"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_new_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="fab"
+            android:layout_gravity="bottom|end"
+            android:elevation="5dp"
+            android:src="@drawable/ic_note_add_white_48dp"
+            android:onClick="onAddSource"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <dogaozkaraca.SwipeRefreshLayoutRotary
+        android:id="@+id/swipe_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF"
+            android:visibility="gone"
+            android:id="@+id/listViewSearcher"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"/>
+
+    </dogaozkaraca.SwipeRefreshLayoutRotary>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/noresultsfound"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#FF00FF"
+        android:visibility="gone"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="No results found!\nBut, we can add missing news source for you."
+            android:textColor="#000"
+            android:textSize="14dp"
+            android:paddingTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/noresultsfound_text"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/noresultsfound_button"
+            android:layout_below="@id/noresultsfound_text"
+            android:text="Click here to send request"
+            android:background="#00FF00"
+            android:textSize="16dp"
+            android:paddingBottom="5dp"
+
+            android:layout_alignLeft="@+id/noresultsfound_text"
+            android:layout_alignStart="@+id/noresultsfound_text"
+            android:layout_alignRight="@+id/noresultsfound_text"
+            android:layout_alignEnd="@+id/noresultsfound_text" />
+    </RelativeLayout>
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/webView1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"/>
+
+
+</RelativeLayout>

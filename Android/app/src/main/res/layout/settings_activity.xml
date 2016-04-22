@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/RL0">
+        <ImageView
+            android:id="@+id/rssSettingsImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/rss_circle"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/rss"
+            android:id="@+id/textViewRssConnect"
+            android:gravity="left|center"
+            android:textColor="#212121"
+            android:layout_toLeftOf="@+id/rssSettingsButton"
+            android:layout_toRightOf="@+id/rssSettingsImage"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="Settings"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="#00FFFFFF"
+            android:gravity="center|center"
+            android:id="@+id/rssSettingsButton"
+            android:onClick="rssSettings"/>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DFDFDF"
+        android:id="@+id/separator0"
+        android:layout_below="@+id/RL0"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/RL1"
+        android:layout_below="@id/separator0">
+        <ImageView
+            android:id="@+id/twitterSettingsImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/twitter_circle"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/twitter"
+            android:id="@+id/textViewTwConnect"
+            android:gravity="left|center"
+            android:textColor="#212121"
+            android:layout_toLeftOf="@+id/twitterConnectButton"
+            android:layout_toRightOf="@+id/twitterSettingsImage"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="Connect"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="#00FFFFFF"
+            android:gravity="center|center"
+            android:id="@+id/twitterConnectButton"
+            android:onClick="connectTwitter"/>
+
+
+    </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFDFDF"
+            android:id="@+id/separator1"
+            android:layout_below="@+id/RL1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/RL2"
+        android:layout_below="@id/separator1"
+        >
+        <ImageView
+            android:id="@+id/instagramSettingsImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/instagram_circle"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/instagram"
+            android:id="@+id/textViewInstaConnect"
+            android:gravity="left|center"
+            android:textColor="#212121"
+            android:layout_toLeftOf="@+id/instagramConnectButton"
+            android:layout_toRightOf="@+id/instagramSettingsImage"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="Connect"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="#00FFFFFF"
+            android:gravity="center|center"
+            android:id="@+id/instagramConnectButton"
+            android:onClick="connectInstagram"/>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DFDFDF"
+        android:id="@+id/separator2"
+        android:layout_below="@+id/RL2"/>
+</RelativeLayout>
