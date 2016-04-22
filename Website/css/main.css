@@ -158,10 +158,10 @@ width: 100%;
     border-color:#DD0000
 }
 .next-btn {
-     display:block;
-	font-family: 'PT Sans Narrow', sans-serif;
+  	font-family: 'PT Sans Narrow', sans-serif;
     border:2px solid #44454b;
-    margin:15px;
+	width:100%;
+	margin-top:3em;
     padding:8px 14px 8px;
     font-size:1.5em;
     text-align:center;
