@@ -1,0 +1,245 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+body {
+  background: #FFFFFF; /* fallback for old browsers */
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+
+
+
+
+.login-page {
+  width: 100%;
+  padding:10% 0 0 0;
+  text-align:center;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  
+  background: #FFFFFF;
+  max-width: 100%;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+
+
+.title
+{
+font-family: "Yanone Kaffeesatz", sans-serif;
+  outline: 4;
+  width: 100%;
+  color:#000000;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+  font-size: 14em;
+}
+
+.sub
+{
+	font-family: "Yanone Kaffeesatz", sans-serif;
+  outline: 0;
+  text-align:center;
+  width: 100%;
+  margin: 0 auto 100px;
+
+  font-size: 5em;	
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  /*background: #f2f2f2;*/
+  width: 100%;
+  border: 0;
+  /*margin: 0 0 15px;*/
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form buttonfb {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #0D47A1;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form buttongle {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #2962FF;
+  width: 100%;
+  border: 0;
+  padding: 15%;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form buttonfb:hover,.form buttonfb:active,.form buttonfb:focus {
+  background: #43A047;
+}
+.form buttongle:hover,.form buttongle:active,.form buttongle:focus {
+  background: #43A047;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+
+@media all and (min-width: 992px) {
+.title
+{
+font-family: "Yanone Kaffeesatz", sans-serif;
+  outline: 4;
+  width: 100%;
+  color:#FFFFFF;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+  font-size: 70px;
+}
+body {
+  background: #222222; /* fallback for old browsers */
+}
+
+.form buttonfb {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #0D47A1;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.container {
+  max-width: 300px;
+}
+.login-page {
+  width: 360px;
+}
+.form {
+  max-width: 360px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.sub
+{
+  font-size: 22px;	
+}
+.form input {
+  font-size: 14px;
+}
+.form button {
+  font-size: 14px;
+}
+.form buttonfb {
+  font-size: 14px;
+}
+.form buttongle {
+  font-size: 14px;
+}
+.form .message {
+  font-size: 12px;
+}
+.container .info h1 {
+  font-size: 36px;
+}
+}
