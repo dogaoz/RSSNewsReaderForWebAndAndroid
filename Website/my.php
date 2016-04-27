@@ -35,6 +35,30 @@ session_start();
 
 <script>
 
+function follow(fid) {
+  
+   jQuery.ajax({
+    type: "POST",
+    url: 'bitPopsAPI.php',
+    data: {functionname: 'addFeedToUser',feedID: fid},
+    dataType: 'json',
+    success: function (obj, textstatus) 
+    {
+                  if( !('error' in obj) )
+                  {
+                    data = obj.result;
+                    document.getElementById("myFeeds").innerHTML = data.toString();
+
+                  }
+            	  else
+               	  {
+                      document.getElementById("myFeeds").innerHTML = obj.error;
+                  }
+            }
+	});
+
+    }
+
 function unfollow(fid) {
   
    jQuery.ajax({

@@ -28,7 +28,7 @@
                             </ul>
 							-->
                             <ul class="nav navbar-nav social">
-                                      <div class="navbar-user" href="#"><a class="user-text" href="my.php"><img src="https://graph.facebook.com/<?php echo $_SESSION['FBID']; ?>/picture"> <?php echo $_SESSION['FULLNAME']; ?></a>
+                                      <div class="navbar-user" href="#"><a class="user-text" href="my.php"><img src="https://graph.facebook.com/<?php echo $_SESSION['FBID']; ?>/picture">&nbsp; Hi, <?php echo $_SESSION['FIRSTNAME']; ?></a>
                                       <a class="navbar-user-logout" href="logout.php">Logout</a>
                                       </div>
 							</br>

@@ -32,6 +32,9 @@ if(isset($_POST['functionname'])
             case 'deleteFeedFromUser':
                $aResult['result'] = removeFeed($userID,$_POST['feedID']);
                break;
+            case 'addFeedToUser':
+               $aResult['result'] = addFeed($userID,$_POST['feedID']);
+               break;
             default:
                //$aResult['error'] = 'Not found function '.$_POST['functionname'].'!';
                break;
