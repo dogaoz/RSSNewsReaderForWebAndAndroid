@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+   html, body 
+   {
+     position: absolute;
+     height: 100%;
+     max-height: 100%;
+     width: 100%;
+     margin: 0;
+     padding: 0;
+   }
+
+   iframe 
+   {
+     min-height: 100%;
+     min-width: 100%;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+   }
+   
+   .footer
+   {
+     position: absolute;
+     width: 100%;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     height: 50px;
+     background: black;
+   }
+   
+   #container
+   {
+     position: absolute;
+     top: 50px; /* Change with Height of #header */
+     bottom: 0;
+     width: 100%;
+     overflow: hidden ;
+   }
+   
+   #header
+   {
+     position: absolute;
+     top: 0px;
+     height: 50px; /* Change with top of #container */
+     color: #eee;
+     background-color: #ccc;
+     width: 100%;
+   }
