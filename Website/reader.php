@@ -22,11 +22,12 @@ session_start();
 </head>
 
 <body>
+<!-- <?php $_SESSION['temp_postURL'] ?>  -->
 
-  <div id="container">
-    <iframe src="<?php $_SESSION['temp_postURL'] ?> http://google.com"></iframe>
-  </div>
-  <div id="footer"> Hello </div>
+  	<div id="header"> Hello </div>
+  	<div id="container">
+	<iframe src="http://bitpops.com"></iframe>
+	</div>
 
 </body>
 </html>
