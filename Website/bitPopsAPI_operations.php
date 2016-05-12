@@ -1,7 +1,6 @@
 <?php
 //ini_set('display_errors', 'On');
 
-
 	function loadFeed($userID)
 	{
     		$userFeeds = mysql_query("SELECT feedID FROM FeedsOfUsers WHERE userID='$userID';") or die(mysql_error());
@@ -186,8 +185,14 @@
 
 				. '</br></ul></div></div></div>';
 			
-			$userFeeds = mysql_query("SELECT feedID FROM FeedsOfUsers WHERE userID='$userID';") or die(mysql_error());
-			$count = mysql_num_rows($userFeeds);
+			//sql injection preventation test
+			//$userFeeds = mysql_query("SELECT feedID FROM FeedsOfUsers WHERE userID='$userID';") or die(mysql_error());
+			global $dbConnection;
+			$feed = $dbConnection->prepare('SELECT feedID FROM FeedsOfUsers WHERE userID= ?');
+			$feed->execute(array($userID));
+			$feeds  = $feed->fetchAll(PDO::FETCH_ASSOC);
+			
+			$count = count($feeds);
 			if ($count == 0) 
 			{
 				//User don't have any feeds
@@ -200,7 +205,6 @@
 			} 
 			else 
 			{ 
-				
 				/// My Feeds
 				$myfeeds = "";
 				$result = $result .'<div class="col-sm-6 col-md-6 col-lg-6">'
@@ -208,13 +212,15 @@
 				. '</br><h4 style="text-align:center;">Following&nbsp; ( '.$count.' ) </h4>'
 				.'<div id="feedlist" ><ul>';
 
-				while ($feedRow = mysql_fetch_array($userFeeds))
+				foreach ($feeds as $feedRow)
 				{
 				
 		
 					$feedID = $feedRow['feedID'];
-					$feeds  = mysql_query("SELECT * FROM Feeds WHERE feedID='$feedID';");
-						while ($feed = mysql_fetch_array($feeds))
+					$feed = $dbConnection->prepare('SELECT * FROM Feeds WHERE feedID= ?');
+					$feed->execute(array($feedID));
+					$feeds  = $feed->fetchAll(PDO::FETCH_ASSOC);
+						foreach ($feeds as $feed)
 						{
 						
 						$myfeeds  = $myfeeds

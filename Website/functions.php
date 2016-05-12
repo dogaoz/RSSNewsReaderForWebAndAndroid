@@ -4,26 +4,39 @@ require 'dbconfig.php';
 
 	function checkuser($fuid,$ffname,$flname,$femail)
 	{
-    	$check = mysql_query("select * from Users where fbUserID='$fuid'");
-		$check = mysql_num_rows($check);
+		global $dbConnection;
+			$query = $dbConnection->prepare('select * from Users where fbUserID= ?');
+			$query->execute(array($fuid));
+			$result  = $query->fetchAll(PDO::FETCH_ASSOC);
+			
+		$check = count($result);
 		if (empty($check)) 
 		{ // if new user . Insert a new record		
-			$query = "INSERT INTO Users (userName,userLastName,userEmail,fbUserID) VALUES ('$ffname','$flname','$femail','$fuid');";
-			mysql_query($query);	
+			$q = "INSERT INTO Users (userName,userLastName,userEmail,fbUserID) VALUES (?,?,?,?);";
+			$query = $dbConnection->prepare($q);
+			$query->execute(array($ffname,$flname,$femail,$fuid));
+				
 		} 
 		else
 		{   // If Returned user . update the user record		
-			$query = "UPDATE Users SET userName='$ffname', userLastName='$flname', userEmail='$femail' where fbUserID='$fuid';";
-			mysql_query($query);
+			$q = "UPDATE Users SET userName=?, userLastName=?, userEmail=? where fbUserID=?;";
+			$query = $dbConnection->prepare($q);
+			$query->execute(array($ffname,$flname,$femail,$fuid));
 		}
 	}
 	
 	function getUserIDusingFID($fuid)
 	{
-		$query = mysql_query("SELECT userID FROM Users WHERE fbUserID='$fuid';");
-		$row = mysql_fetch_array($query);
-
-	return $row[0];
+		global $dbConnection;	
+		$q = "SELECT userID FROM Users WHERE fbUserID=?;";
+		$query = $dbConnection->prepare($q);
+		$query->execute(array($fuid));
+		
+		$rows = $query->fetchAll(PDO::FETCH_ASSOC);
+	foreach( $rows as $row ) {
+	return $row['userID'];
+	}
+	
 	}
 
 ?>
